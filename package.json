@@ -1,6 +1,6 @@
 {
   "name": "angular",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -41,6 +41,6 @@
     "protractor": "~5.1.0",
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
-    "typescript": "~2.0.0"
+    "typescript": "2.1.5"
   }
 }
