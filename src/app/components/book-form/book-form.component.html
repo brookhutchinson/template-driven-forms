@@ -11,7 +11,17 @@
 
           <!-- check if show alert messages -->
           <div class="alert alert-danger" role="alert" *ngIf="title.errors && (title.dirty || title.touched)">
+            <div>
+              Book Title is required!
+            </div>
 
+            <div>
+              Book Title must be at least 5 characters long.
+            </div>
+
+            <div>
+              Book Title cannot be more than 30 characters long.
+            </div>
           </div><!-- /.alert alert-danger -->
         </div><!-- /.form-group -->
       </div><!-- /.col-md-12 -->
