@@ -7,7 +7,7 @@
       <div class="col-md-12">
         <div class="form-group">
           <label>Title</label>
-          <input class="form-control" type="input" name="title" required>
+          <input class="form-control" type="input" name="title" [(ngModel)]="book.title" required>
         </div><!-- /.form-group -->
       </div><!-- /.col-md-12 -->
     </div><!-- /.row -->
@@ -17,7 +17,7 @@
       <div class="col-md-12">
         <div class="form-group">
           <label>Author</label>
-          <input class="form-control" type="input" name="author" required>
+          <input class="form-control" type="input" name="author" [(ngModel)]="book.author" required>
         </div><!-- /.form-group -->
       </div><!-- /.col-md-12 -->
     </div><!-- /.row -->
@@ -27,7 +27,7 @@
       <div class="col-md-12">
         <div class="form-group">
           <label>URL</label>
-          <input class="form-control" type="input" name="url">
+          <input class="form-control" type="input" name="url" [(ngModel)]="book.url">
         </div><!-- /.form-group -->
       </div><!-- /.col-md-12 -->
     </div><!-- /.row -->
