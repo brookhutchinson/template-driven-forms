@@ -17,4 +17,9 @@ export class BookFormComponent {
     // create book object
     this.book = new Book(1, '', '', 'http://');
   }
+
+  get currentBook() {
+    // return book model object in JSON format
+    return JSON.stringify(this.book);
+  }
 }
