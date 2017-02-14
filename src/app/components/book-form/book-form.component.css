@@ -1,0 +1,9 @@
+/* show user that form input value is ok */
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42a94b; /* green */
+}
+
+/* show user that form input value is not ok */
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442; /* red */
+}
