@@ -11,15 +11,18 @@
 
           <!-- check if show alert messages -->
           <div class="alert alert-danger" role="alert" *ngIf="title.errors && (title.dirty || title.touched)">
-            <div>
+            <!-- required alert -->
+            <div [hidden]="!title.errors.required">
               Book Title is required!
             </div>
 
-            <div>
+            <!-- minlength alert -->
+            <div [hidden]="!title.errors.minlength">
               Book Title must be at least 5 characters long.
             </div>
 
-            <div>
+            <!-- maxlength alert -->
+            <div [hidden]="!title.errors.maxlength">
               Book Title cannot be more than 30 characters long.
             </div>
           </div><!-- /.alert alert-danger -->
