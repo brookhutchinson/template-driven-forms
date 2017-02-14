@@ -8,6 +8,11 @@
         <div class="form-group">
           <label>Title</label>
           <input class="form-control" type="input" name="title" [(ngModel)]="book.title" minlength="5" maxlength="30" #title="ngModel" required>
+
+          <!-- check if show alert messages -->
+          <div class="alert alert-danger" role="alert" *ngIf="title.errors && (title.dirty || title.touched)">
+
+          </div><!-- /.alert alert-danger -->
         </div><!-- /.form-group -->
       </div><!-- /.col-md-12 -->
     </div><!-- /.row -->
