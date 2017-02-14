@@ -36,6 +36,14 @@
         <div class="form-group">
           <label>Author</label>
           <input class="form-control" type="input" name="author" [(ngModel)]="book.author" #author="ngModel" required>
+
+          <!-- check if show alert messages -->
+          <div class="alert alert-danger" role="alert" *ngIf="author.errors && (author.dirty || author.touched)">
+            <!-- required alert -->
+            <div [hidden]="!author.errors.required">
+              Book Author is required!
+            </div>
+          </div><!-- /.alert alert-danger -->
         </div><!-- /.form-group -->
       </div><!-- /.col-md-12 -->
     </div><!-- /.row -->
