@@ -53,7 +53,22 @@
       <div class="col-md-12">
         <div class="form-group">
           <label>URL</label>
-          <input class="form-control" type="input" name="url" [(ngModel)]="book.url" #url="ngModel" pattern="https?://.+">
+          <input class="form-control" type="input" name="url" [(ngModel)]="book.url" #url="ngModel" required pattern="https?://.+">
+
+          <!-- check if show alert messages -->
+          <div class="alert alert-danger" role="alert" *ngIf="url.errors && (url.dirty || url.touched)">
+
+            <!-- required alert -->
+            <div [hidden]="!url.errors.required">
+              Book URL is required!
+            </div>
+
+            <!-- pattern alert -->
+            <div [hidden]="!url.errors.pattern">
+              Book URL must be a valid URL. Book URL must start with either http:// or https://
+            </div>
+
+          </div><!-- /.alert alert-danger -->
         </div><!-- /.form-group -->
       </div><!-- /.col-md-12 -->
     </div><!-- /.row -->
