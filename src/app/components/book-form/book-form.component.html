@@ -1,7 +1,7 @@
 <div class="container">
   <h4>Book Form</h4>
 
-  <form novalidate>
+  <form #bookForm="ngForm" novalidate>
     <!-- title -->
     <div class="row">
       <div class="col-md-12">
@@ -74,7 +74,7 @@
     </div><!-- /.row -->
 
     <!-- form submit button -->
-    <button class="btn btn-primary btn-block" type="submit">Submit</button>
+    <button class="btn btn-primary btn-block" type="submit" [disabled]="!bookForm.form.valid">Submit</button>
   </form>
 
   <hr>
